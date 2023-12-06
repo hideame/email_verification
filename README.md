@@ -1,1 +1,1 @@
-Email認証を行うWebサイト
+Email認証を行うWebサイト構築例
