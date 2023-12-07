@@ -2,6 +2,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class CustomUserManager(BaseUserManager):
@@ -38,6 +39,7 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractUser):
     # 以下をオーバーライド
+    username = models.CharField(_("username"), max_length=150)  # emailを一意にするので、usernameはuniqueの制限を外す
     email = models.EmailField(unique=True)  # 認証で使うので入力必須かつユニークに
     USERNAME_FIELD = "email"  # USERNAMEフィールドをusernameからemailに
     REQUIRED_FIELDS = []  # emailがデフォルトで入っていてエラーになるので除外する
