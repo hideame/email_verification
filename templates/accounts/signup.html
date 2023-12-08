@@ -1,15 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Sign up</h1>
-<form action="/url/to/submit/" method="post" class="form">{% csrf_token %}
+<form method="post" class="form">{% csrf_token %}
   {% bootstrap_form form layout="horizontal" %}
   {% bootstrap_button button_type="submit" content="Sign up" %}
 </form>
-
-<!-- <section class="common-form">
-  <form method="post">{% csrf_token %}
-    {% bootstrap_form form layout="horizontal" %}
-    <button type="submit" class="submit btn btn-primary">Sign up</button>
-  </form>
-</section> -->
 {% endblock %}
