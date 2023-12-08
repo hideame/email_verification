@@ -1,0 +1,4 @@
+<form method="post" class="form">{% csrf_token %}
+  {% bootstrap_form form layout="horizontal" %}
+  {% bootstrap_button button_type="submit" content=""|add:submit_label %}
+</form>

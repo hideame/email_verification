@@ -14,10 +14,6 @@
     {% endif %}
   {% endif %}
 
-  <form action="{% url 'login' %}" method="post">{% csrf_token %}
-    <input type="hidden" name="next" value="{{ next }}">
-    {% bootstrap_form form layout="horizontal" %}
-    <button type="submit" class="btn btn-primary">Login</button>
-  </form>
+  {% include "_form.html" with submit_label="Login" %}
 </section>
 {% endblock %}
