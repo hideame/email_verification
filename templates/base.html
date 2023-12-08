@@ -21,7 +21,7 @@
               <ul class="navbar-nav">
                 {% if user.is_authenticated %}
                   <li class="nav-item">
-                    <a href="{% url 'user_detail' %}" class="nav-link">{{ user }}</a>
+                    <a href="{% url 'accounts:user_detail' %}" class="nav-link">{{ user }}</a>
                   </li>
                   <li class="nav-item">
                     <a href="{% url 'logout' %}" class="logout nav-link">Logout</a>
