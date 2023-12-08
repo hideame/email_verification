@@ -3,7 +3,7 @@
 <h1>Login</h1>
 <section class="common-form">
   {% if form.errors %}
-    <p class="error-msg">Your username and password didn't match. Please try again.</p>
+    <p class="error-msg">Your email and password didn't match. Please try again.</p>
   {% endif %}
 
   {% if next %}
@@ -15,5 +15,8 @@
   {% endif %}
 
   {% include "_form.html" with submit_label="Login" %}
+  <div class="mt-2">
+    <a href="{% url 'password_reset' %}">If you forgot password..</a>
+  </div>
 </section>
 {% endblock %}
