@@ -12,7 +12,7 @@
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a href="#" class="navbar-brand">Email Verification</a>
+          <a href="{% url 'top' %}" class="navbar-brand">Email Verification</a>
           <div class="float-end">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="switching navigation">
               <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
               <ul class="navbar-nav">
                 {% if user.is_authenticated %}
                   <li class="nav-item">
-                    <span class="nav-link">{{ user }}</span>
+                    <a href="{% url 'user_detail' %}" class="nav-link">{{ user }}</a>
                   </li>
                   <li class="nav-item">
                     <a href="{% url 'logout' %}" class="logout nav-link">Logout</a>
