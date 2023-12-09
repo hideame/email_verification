@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% if result %}
+  <h2>Sign-up completed</h2>
+  <p>Sign-up has been completed.</p>
+  <a class="btn btn-primary" href="{% url 'login' %}" role="button">Login</a>
+{% else %}
+  <p>Invalid link.</p>
+{% endif %}
+{% endblock %}

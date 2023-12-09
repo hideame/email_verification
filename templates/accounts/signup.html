@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Sign up</h1>
-<form method="post" class="form">{% csrf_token %}
-  {% bootstrap_form form layout="horizontal" %}
-  {% bootstrap_button button_type="submit" content="Sign up" %}
-</form>
+{% include "_form.html" with submit_label="Sign up" %}
 {% endblock %}
